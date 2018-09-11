@@ -1,0 +1,34 @@
+<div style="background-image: url(../../assets/images/blogBackground2.jpg)" class="backgroundBlogTop">
+    <h3>BLOG</h3>
+</div>
+
+<link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="articleContainer">
+
+
+    <h1 class="titleArticle principalColor">{{ blog.title }}</h1>
+
+    <img src="{{ blog.imgUrl }}">
+    <p class="dateArticle principalColor"><i class="fa fa-calendar"></i> {{ blog.date | dateBlog }}</p>
+    <p class="resumeArticle">{{ blog.resume }}</p>
+    <div class="textArticle" [innerHTML]="blog.text">
+
+    </div>
+
+    <div *ngIf="blog.youtube != null" id="iframeContainer">
+
+    </div>
+
+    <p>Ultima modificacion {{ blog.updated_at }}</p>
+
+    <fb-like href="https://github.com/zyra/ngx-facebook"></fb-like>
+    <!-- <div id="comentBox" class="fb-comments" data-href="" data-numposts="5" width="100%"></div> -->
+
+
+
+</div>
+
+<!-- <div class="articleData">
+
+</div> -->

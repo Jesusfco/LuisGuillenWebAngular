@@ -1,0 +1,115 @@
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- <link href="../../assets/css/animate.min.css" rel="stylesheet"> -->
+<!-- <link href="../../assets/css/owl.carousel.css" rel="stylesheet">  -->
+<!-- <link href="../../assets/css/owl.transitions.css" rel="stylesheet"> -->
+<!-- <link href="../../assets/css/prettyPhoto.css" rel="stylesheet"> -->
+<!-- <link href="../../assets/css/main.css" rel="stylesheet"> -->
+<!-- <link href="../../assets/css/responsive.css" rel="stylesheet"> -->
+
+<div class="shadow" id="shadowMenu" (click)="menuAction()"></div>
+
+<header id="header">
+    <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header" [routerLink]="['./']">
+
+                <a class="navbar-brand"><img src="assets/images/logo.png" width="70" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li (click)="smoothScroll('#home')" class="scroll active"><a>Experiencia</a></li>
+                    <li (click)="smoothScroll('#features')" class="scroll"><a>Luis Guillén</a></li>
+                    <li (click)="smoothScroll('#cta2')" class="scroll"><a>Hipnosis, PNL<br/>& Neurociencia</a></li>
+                    <li (click)="smoothScroll('#services')" class="scroll"><a>Servicios</a></li>
+                    <li class="scroll" [routerLink]="['./blog']"><a>Blog</a></li>
+                    <!--<li class="scroll"><a href="#about">Galería</a></li>-->
+                    <!--<li class="scroll"><a href="#meet-team">Investigaciones</a></li>-->
+                    <!--<li class="scroll"><a href="#pricing">Pricing</a></li>-->
+                    <!--<li class="scroll"><a href="#blog">Blog</a></li>-->
+                    <li (click)="smoothScroll('#contact')" class="scroll"><a>Contáctame</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--/.container-->
+    </nav>
+    <!--/nav-->
+</header>
+
+<div class="menuPhone" *ngIf="menuBoolean">
+    <img [routerLink]="['./']" class="logoPrincipal" src="assets/images/logo.jpg">
+
+    <div class="moveLinks">
+        <a>
+            <p (click)="smoothScroll('#home')">Experiencia</p>
+        </a>
+        <a>
+            <p (click)="smoothScroll('#features')">Luis Guillén</p>
+        </a>
+        <a>
+            <p (click)="smoothScroll('#cta2')">Hipnosis, PNL, Neurociencia</p>
+        </a>
+        <a>
+            <p (click)="smoothScroll('#services')">Servicios</p>
+        </a>
+        <a (click)="menuAction()" [routerLink]="['./blog']">
+            <p>Blog</p>
+        </a>
+        <a>
+            <p (click)="smoothScroll('#contact')">Contáctame</p>
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<div class="navMov" id="bodyMove1">
+
+    <div class="container">
+        <div [routerLink]="['./']">
+            <img src="./assets/images/logo.jpg">
+        </div>
+        <div></div>
+        <div class="movFire" (click)="menuAction()">
+            <p>
+                <i class="fa fa-bars"></i>
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="bodyMove" id="bodyMove2">
+    <router-outlet></router-outlet>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2018. Desarrollado por <a target="_blank" href="http://rodriguez.amerigas.mx/" title="Rodriguez Service">Rodríguez Service.</a>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/luisguillenoficial/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/luiseguillen?lang=es"><i class="fa fa-twitter"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-flickr"></i></a></li>-->
+                        <li><a href="https://www.youtube.com/user/REMA77"><i class="fa fa-youtube"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-github"></i></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>

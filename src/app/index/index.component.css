@@ -1,0 +1,270 @@
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.menuPhone {
+    display: none;
+}
+
+.navMov {
+    display: none;
+}
+
+.sliderContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 120px;
+}
+
+.sliderContainer .bar-progress {
+    /* transition: .02s; */
+    background: #2a80a1;
+    height: 6px;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    position: absolute;
+}
+
+.sliderContainer .slider {}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slider .letter * {
+    color: white;
+}
+
+.slider h2 {
+    font-size: 36px;
+}
+
+.slider .letter span {
+    color: #2a95be;
+}
+
+.slider .piece {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+}
+
+.slider .sWrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.slideButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    margin-top: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+#sliderNext {
+    right: 15px;
+}
+
+#sliderBefore {
+    left: 15px;
+}
+
+.sliderContainer .barProgress {}
+
+.google-map {
+    min-height: 50vh;
+    height: 750px;
+    position: relative;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.google-map .difuser {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2a95be;
+    opacity: .28;
+}
+
+#features {
+    background: white;
+}
+
+.blogContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.blog {
+    width: 30%;
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.blog:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 5px 6px 9px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 5px 6px 9px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 6px 9px 0px rgba(0, 0, 0, 0.35);
+}
+
+#blog {
+    background: #eeeeee;
+    padding: 70px 15px;
+}
+
+.blog img {
+    width: 100%;
+}
+
+.dateBlog {
+    font-size: 12px;
+    margin: 0;
+    position: relative;
+    top: -4px;
+    color: #5c5c5c;
+}
+
+@media screen and (max-width: 1000px) {
+    .blog {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .blogContainer {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .slideButton {
+        display: none;
+    }
+    .blog {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menuPhone {
+        z-index: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: black;
+        height: 100vh;
+        width: 250px;
+        display: block;
+    }
+    .menuPhone * {
+        color: white;
+    }
+    .menuPhone .logoPrincipal {
+        width: 88%;
+        display: block;
+        margin: 0 auto;
+    }
+    .menuPhone a {
+        border-bottom: 1px solid #4c4b4b;
+        text-decoration: none;
+        padding: 0 20px;
+        display: block;
+        margin: 12px 0;
+    }
+    #header {
+        display: none;
+    }
+    .sliderContainer {
+        padding-top: 75px;
+    }
+    .navMov {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black !important;
+        width: 100%;
+        overflow: hidden;
+    }
+    .navMov .container div {
+        width: 40%;
+    }
+    .navMov .container {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .navMov img {
+        height: 75px;
+    }
+    .movFire {
+        display: flex;
+        /* height: 100%; */
+        align-items: center;
+        color: white;
+        width: 10% !important;
+        text-align: right
+    }
+    .movFire p {
+        width: 100%;
+        text-align: right;
+    }
+    .bodyMove {
+        transition: .7s ease;
+        transform: translateX(0);
+        z-index: 2;
+    }
+    #bodyMove2 {
+        background: white;
+    }
+    .bodyMove.active {
+        transform: translateX(-250px);
+    }
+    .shadow {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        opacity: 0;
+        transition: .7s ease;
+        transform: translateX(0);
+        z-index: 20;
+    }
+    .shadow.display {
+        display: block;
+    }
+    .shadow.active {
+        opacity: .6;
+        transform: translateX(-250px);
+    }
+    #about .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

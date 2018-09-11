@@ -1,0 +1,93 @@
+.backgroundBlogTop {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.backgroundBlogTop h3 {
+    color: white;
+    font-size: 80px;
+}
+
+.articleContainer {
+    width: 75%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -20vh;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.articleContainer img {
+    width: 100%;
+}
+
+.articleContainer h1 {
+    text-align: center;
+}
+
+#iframeContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#iframeContainer>iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.resumeArticle {
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Roboto Slab', serif; */
+    font-size: 14;
+}
+
+.resumeArticle:before {
+    height: auto;
+    width: 2px;
+    background: black;
+}
+
+@media screen and (max-width: 700px) {
+    .articleContainer {
+        padding: 20px 0;
+        width: 100%;
+        top: 0;
+        box-shadow: none;
+    }
+    .backgroundBlogTop {
+        margin-top: 75px;
+        height: 35vh;
+    }
+    .backgroundBlogTop h3 {
+        font-size: 45px;
+    }
+    #iframeContainer {
+        width: 100%;
+    }
+    .dateArticle {
+        padding: 0 15px;
+    }
+    .textArticle {
+        padding: 0 15px;
+    }
+    .resumeArticle {
+        padding: 0 15px;
+    }
+}
